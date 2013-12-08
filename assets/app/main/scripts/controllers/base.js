@@ -7,7 +7,8 @@ define(['app','angular', 'main/scripts/controllers/navigator'], function (app, a
 
         };
 
-
+        //Initialization
+        $scope.init();
 
     }]);
 });
