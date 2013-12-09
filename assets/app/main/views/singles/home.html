@@ -1,0 +1,76 @@
+<div id="main"></div>
+
+<div id="myCarousel" class="carousel slide">
+
+    <div class="carousel-inner">
+        <div carousel interval="5000">
+            <div slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin: auto;">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Example headline.</h1>
+                        <p class="lead">{{slide.text}}</p>
+                        <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Marketing messaging and featurettes
+    ================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <div class="row">
+        <div class="span12" style="text-align: center">
+            <h2>Nullam id dolor id nibh ultricies </h2>
+            <hr class="dashed">
+        </div>
+    </div>
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row-fluid">
+        <aloha compile="editable1.content" id="{{editable1.id}}" type="{{editable1.type}}" class="span4 content"></aloha>
+        <aloha compile="editable2.content" id="{{editable2.id}}" type="{{editable2.type}}" class="span4 content"></aloha>
+        <aloha compile="editable3.content" id="{{editable3.id}}" type="{{editable3.type}}" class="span4 content"></aloha>
+    </div>
+    <!-- /.row -->
+
+    <!-- START THE FEATURETTES -->
+    <div class="container">
+
+        <hr id="feature1" class="featurette-divider">
+
+        <div class="featurette">
+            <aloha compile="featurette1.content" id="{{featurette1.id}}" type="{{featurette1.type}}"></aloha>
+        </div>
+
+        <hr id="feature2" class="featurette-divider">
+
+        <div class="featurette">
+            <aloha compile="featurette2.content" id="{{featurette2.id}}" type="{{featurette2.type}}"></aloha>
+        </div>
+
+        <hr id="feature3" class="featurette-divider">
+
+        <div class="featurette">
+            <aloha compile="featurette3.content" id="{{featurette3.id}}" type="{{featurette3.type}}"></aloha>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+        <!-- FOOTER -->
+        <footer>
+            <p smooth-scroll target="main" class="pull-right"><a href="#/home#main">Back to top</a></p>
+            <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </div>
+</div>

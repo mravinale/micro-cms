@@ -1,0 +1,33 @@
+<!-- partial view -->
+
+
+
+<div id="content">
+    <div class="container txt-lefty">
+        <div class="row-fluid">
+            <div class="span9">
+                <div class="entry" ng-repeat="post in previewPosts ">
+                    <a href="#/blogPage/{{post.id}}">
+                        <h2>{{post.title}}</h2>
+                    </a> 
+                    <hr>
+                    <div class="row-fluid">
+                        
+                        <div class="">
+                            <div ng-bind-html-unsafe="post.content  | cut:true:500:'</p>'"></div>
+                            <a href="#/blogPage/{{post.id}}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="span3">
+                
+                <h3>Text Widget</h3>
+                <hr class="halfed">
+                <p>Vivamus rutrum lorem vel puruscondimentum scelerisque. Vivamus viverra risus eu nibh tesque. Proin sed ipsum ipsum, sed placerat eros.</p>
+                
+            </div>
+        </div>
+    </div>
+</div>

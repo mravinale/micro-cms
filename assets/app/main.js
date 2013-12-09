@@ -14,7 +14,8 @@ require.config({
         'bootstrap': '../../js/boostrap/bootstrap',
         'modernizr': '../../js/jquery/modernizr-2.5.3',
         'holder':'../../js/holder',
-        'angular-aloha': 'main/scripts/directives/angular-aloha'
+        'angular-aloha': 'main/scripts/directives/angular-aloha',
+        'base': 'main/scripts/controllers/base'
     },
     shim: {
         'jQuery': { 'exports': 'jQuery' },

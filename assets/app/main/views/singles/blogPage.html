@@ -1,0 +1,53 @@
+<div id="content">
+    <div class="container txt-lefty">
+        <div class="row-fluid">
+            <div class="span9">
+
+                <div class="row-fluid">
+                    <h2 contenteditable="{{editEnable}}" ng-model="post.title"> </h2>
+                </div>
+
+                <div class="entry">
+                    <div class="row-fluid">
+                        <!-- create title in new directive -->
+                        <aloha compile="post.content" id="{{post.id}}" type="{{post.type}}" class="span12 content"></aloha>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <h3>Comments (4) <small>- <a href="#">Add Comment</a></small></h3>
+                            <hr>
+                            <div class="media">
+                                <a class="pull-left" href="#"><img class="media-object img-polaroid" alt="image" src="http://quickimage.it/64x64"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Jim Sturgess</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur.</p>
+                                    <small><em>Jan 4, 2013</em> - <a href="#">Reply</a></small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#"><img class="media-object img-polaroid" alt="image" src="http://quickimage.it/64x64"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Ashley Marks</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur.</p>
+                                    <small><em>Jan 4, 2013</em> - <a href="#">Reply</a></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="span3">
+            
+                <h3>Text Widget</h3>
+                <hr class="halfed">
+                <p>Vivamus rutrum lorem vel puruscondimentum scelerisque. Vivamus viverra risus eu nibh tesque. Proin sed ipsum ipsum, sed placerat eros.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
