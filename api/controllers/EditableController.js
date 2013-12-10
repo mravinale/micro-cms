@@ -8,11 +8,12 @@
 module.exports = {
 
     PreviewInfo: function(req, res) {
-        Editable.find(function(err, items){
-            if (err) return res.send(err, 500);
-
-            res.send(items, 200);
-        });
+        Editable.find()
+            .where({ type: 'PreviewInfo' })
+            .exec(function(err, items){
+                if (err) return res.send(err, 500);
+                res.send(items, 200);
+            });
     },
 
     UpdatePreviewInfo: function(req, res) {
@@ -24,6 +25,12 @@ module.exports = {
     },
 
     Featurette: function(req, res) {
+        Editable.find()
+            .where({ type: 'Featurette' })
+            .exec(function(err, items){
+                if (err) return res.send(err, 500);
+                res.send(items, 200);
+            });
 
     },
 
