@@ -9,7 +9,7 @@
         "sails-disk": "~0.9.0",
         "ejs": "0.8.4",
         "optimist": "0.3.4",
-        "sails-mongo":"*"
+        "sails-mongo": "*"
     },
     "scripts": {
         "start": "node app.js",
@@ -18,5 +18,9 @@
     "main": "app.js",
     "repository": "",
     "author": "",
-    "license": ""
+    "license": "",
+    "subdomain": "heracles-app",
+    "engines": {
+        "node": "0.10.x"
+    }
 }

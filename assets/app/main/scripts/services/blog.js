@@ -2,7 +2,7 @@ define(['app'], function (app) {
     
     app.service('blogService', ['$http', function ($http, $q) {
 
-        var urlBase = '/api/blog/';
+        var urlBase = '/Post/';
 
         this.getPost = function (id) {
             return $http.get(urlBase + 'GetPost/' + id);

@@ -15,12 +15,12 @@
 module.exports.adapters = {
     // // HOSTED MONGO HQ
 
-    //  'default': 'mongo',
+    'default': 'mongo',
 
-    //   mongo: {
-    //     module   : 'sails-mongo',
-    //     url: "mongodb://admin:1234@mravinale.mongohq.com:10099/heracles",
-    //     schema: true
-    //   }
+    mongo: {
+        module   : 'sails-mongo',
+        url: "mongodb://mravinale:1qazxsw2@ds059898.mongolab.com:59898/heracles",
+        schema: true
+    }
 
 };

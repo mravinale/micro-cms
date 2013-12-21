@@ -4,7 +4,7 @@ define(['app', 'base', '../../services/blog'], function (app) {
 
         var getPost = function () {
             blogService.getPost($route.current.params.id).then(function (result) {
-                $scope.post = result.data;
+                $scope.post = result.data[0];
             }, function (error) {
                 console.log('Unable to load preview page data: ' + error.message);
             });

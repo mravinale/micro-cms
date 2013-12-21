@@ -2,7 +2,7 @@ define(['app'], function (app) {
     
     app.service('homeService', ['$http', function ($http) {
 
-        var urlBase = '/api/home/';
+        var urlBase = '/editable/';
 
         this.getPreviewInfo = function () {
             return $http.get(urlBase + 'PreviewInfo');
