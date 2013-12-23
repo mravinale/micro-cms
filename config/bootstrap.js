@@ -16,32 +16,32 @@ module.exports.bootstrap = function (cb) {
         {
             id : 1,
             type : "PreviewInfo",
-            content : "<img class='img-circle' ng-src='Images/marketing1.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
+            content : "<img class='img-circle' ng-src='images/marketing1.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
         },
         {
             id : 2,
             type : "PreviewInfo",
-            content : "<img class='img-circle' ng-src='Images/marketing2.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
+            content : "<img class='img-circle' ng-src='images/marketing2.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
         },
         {
             id : 3,
             type : "PreviewInfo",
-            content : "<img class='img-circle' ng-src='Images/marketing3.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
+            content : "<img class='img-circle' ng-src='images/marketing3.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
         },
         {
             id : 4,
             type : "Featurette",
-            content: "<img class='featurette-image pull-left' src='/Images/featurette1.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
+            content: "<img class='featurette-image pull-left' src='/images/featurette1.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
         },
         {
             id : 5,
             type : "Featurette",
-            content: "<img class='featurette-image pull-right' src='/Images/featurette2.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
+            content: "<img class='featurette-image pull-right' src='/images/featurette2.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
         },
         {
             id : 6,
             type : "Featurette",
-            content: "<img class='featurette-image pull-left' src='/Images/featurette3.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
+            content: "<img class='featurette-image pull-left' src='/images/featurette3.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
         }
 
     ]
@@ -67,26 +67,6 @@ module.exports.bootstrap = function (cb) {
         }
     ]
 
-
-  // It's very important to trigger this callack method when you are finished 
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-
-/*
-    Editable.find().then(function(editables){
-
-        //clean up database
-        _.each(editables, function(editable){
-            Editable.destroy({id: editable.id},function(err){
-               if(err) return console.error(err);
-
-               if(editable.id == 6)  initData();
-            });
-        });
-
-
-    });
-*/
-
     //create new data
     Editable.create(data[0], function(err){ if(err) console.error(err); });
     Editable.create(data[1], function(err){ if(err) console.error(err); });
@@ -100,5 +80,26 @@ module.exports.bootstrap = function (cb) {
     Post.create(posts[1], function(err){ if(err) console.error(err); });
     Post.create(posts[2], function(err){ if(err) console.error(err); });
 
+
+    // It's very important to trigger this callack method when you are finished
+    // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
     cb();
 };
+
+
+
+/*
+ Editable.find().then(function(editables){
+
+ //clean up database
+ _.each(editables, function(editable){
+ Editable.destroy({id: editable.id},function(err){
+ if(err) return console.error(err);
+
+ if(editable.id == 6)  initData();
+ });
+ });
+
+
+ });
+ */

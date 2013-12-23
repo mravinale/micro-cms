@@ -13,12 +13,11 @@
  */
 
 module.exports.adapters = {
-    // // HOSTED MONGO HQ
 
     'default': 'mongo',
 
     mongo: {
-        module   : 'sails-mongo',
+        module : 'sails-mongo',
         url: "mongodb://mravinale:1qazxsw2@ds059898.mongolab.com:59898/heracles",
         schema: true
     }
