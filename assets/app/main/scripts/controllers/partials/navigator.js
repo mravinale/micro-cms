@@ -17,11 +17,17 @@ define(['app','../../services/blog'], function (app) {
     });
 
     app.controller('navigatorController', function ($rootScope, $q, $dialog, $scope, homeService, $route, $location, blogService) {
-         
-        $scope.editEnable = false;
 
-        $rootScope.isAuthenticated = false;
-      
+        $scope.init = function () {
+            $rootScope.editEnable = false;
+            $rootScope.isAuthenticated = false;
+        };
+
+
+        $scope.edit = function () {
+            $rootScope.editEnable =  !$rootScope.editEnable;
+        };
+
         $scope.delete = function () {
             blogService.deletePost($route.current.params.id).then(function (response) {
                 $location.path("/blog");
@@ -82,6 +88,8 @@ define(['app','../../services/blog'], function (app) {
             });
 
         };
+
+        $scope.init();
        
     });
 

@@ -37,10 +37,10 @@
                                   <div class="btn-toolbar">
                                       <div class="btn-group" style="margin-top: 4px">
                                           <button ng-show="isAuthenticated && !createButtonDisabled" type="button" class="btn-inverse" ng-click="create()">Create</button>
-                                          <button ng-show="isAuthenticated && !editButtonDisabled" type="button" class="btn-inverse" ng-model="editEnable" btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">Edit</button>
+                                          <button ng-show="isAuthenticated && !editButtonDisabled" type="button" class="btn-inverse"  ng-click="edit()">Edit</button>
                                           <button ng-show="isAuthenticated && !deleteButtonDisabled" type="button" class="btn-inverse" ng-click="delete()">Delete</button>
                                           <button ng-show="!isAuthenticated" type="button" class="btn-inverse" ng-click="showLogin()">login</button>
-                                          <button ng-show="isAuthenticated" type="button" class="btn-inverse" ng-click="isAuthenticated=false">logout</button>
+                                          <button ng-show="isAuthenticated" type="button" class="btn-inverse" ng-click="isAuthenticated=!isAuthenticated">logout</button>
                                       </div>
                                   </div>
                               </ul>

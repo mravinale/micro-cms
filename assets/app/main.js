@@ -1,11 +1,11 @@
 'use strict';
 
 require.config({
-    waitSeconds: 60,
-    urlArgs: 'cb=' + Math.floor(new Date().valueOf()).toString(),
+   // waitSeconds: 60,
+   // urlArgs: 'cb=' + Math.floor(new Date().valueOf()).toString(),
     paths: {
         'jQuery': '../../js/jquery/jquery-1.9.1.min',
-        'aloha': '../../js/aloha.min',
+        'aloha': '../../js/aloha',
         'angular': '../../js/angular/angular.min',
         'angularRoute': '../../js/angular/angular-route.min',
         'angular-ui': '../../js/angular/angular-ui.min',

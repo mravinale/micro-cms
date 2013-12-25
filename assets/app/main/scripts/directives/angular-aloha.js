@@ -125,11 +125,11 @@ angular.module('ng').filter('cut', function () {
             }
         }
 
-        return value + (tail || ' …');
+        return value + (tail || ' ï¿½');
     };
 });
 
-angular.module('aloha', []).directive('aloha', ['$location', '$compile', '$http', function ($location, $compile, $http, $rootScope) {
+angular.module('aloha', []).directive('aloha', ['$location', '$compile', '$http','$rootScope', function ($location, $compile, $http, $rootScope) {
      
 
 	// Because angularjs would route clicks on any links, but we
@@ -194,8 +194,8 @@ angular.module('aloha', []).directive('aloha', ['$location', '$compile', '$http'
         link: function ($scope, elem, attrs) {
                       
 		    Aloha.ready(function () {
-		         
-		        $scope.$watch('editEnable', function (isEnable) {
+
+                $rootScope.$watch('editEnable', function (isEnable) {
 		            if (isEnable)
 		                Aloha.jQuery(elem).aloha();
 		            else
@@ -203,7 +203,7 @@ angular.module('aloha', []).directive('aloha', ['$location', '$compile', '$http'
 		        });
 
 		        Aloha.bind('aloha-smart-content-changed', function (jEvent, jData) {
- 
+
 		            if (jData.editable.getId() != attrs.id) return;
 
 		            $scope.$emit('Update'+attrs.type, {
