@@ -17,6 +17,7 @@ require.config({
         'angular-aloha': 'main/scripts/directives/angular-aloha',
         'base': 'main/scripts/controllers/base'
     },
+    priority: ["jQuery", "angular","angularRoute","angular-ui","angular-strap","'angular-bootstrap-tpls","angular-aloha"],
     shim: {
         'jQuery': { 'exports': 'jQuery' },
         'angular': { 'exports': 'angular' },
@@ -25,7 +26,7 @@ require.config({
         'angular-ui': { deps: ['angular'] },
         'angular-strap': { deps: ['angular'] },
         'angular-bootstrap-tpls': { deps: ['angular'] },
-        'angular-aloha': { deps: ['jQuery','angular','aloha'] }
+        'angular-aloha': { deps: ['jQuery','angular'] }
     }
 });
 

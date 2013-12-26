@@ -65,10 +65,10 @@
           <script type="text/javascript" src="/js/sails/app.js"></script-->
 
           <!-- Your scripts here? -->
-          <script data-main="app/main" src="/js/require/require.min.js"></script>
+
 
           <script>
-                var Aloha = window.Aloha || (window.Aloha = {});
+                var Aloha = window.Aloha || (window.Aloha = {ready: function(){return false;}});
                 Aloha.settings = {
                     bundles: {
                         custom: '/js/aloha'
@@ -91,6 +91,6 @@
                 };
             </script>
 
-
+          <script data-main="app/main" src="/js/require/require.min.js"></script>
        </body>
 </html>
