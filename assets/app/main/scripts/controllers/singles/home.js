@@ -29,7 +29,7 @@ define(['app','base', '../../services/home'], function (app) {
         var previewInfoListener = $scope.$on('UpdatePreviewInfo', function (event, editable) {
 
             homeService.updatePreviewInfo(editable).then(function (result) {
-                console.log(result.content);
+                console.log(result[0]);
             }, function (error) {
                 console.log(error);
             });
@@ -37,9 +37,8 @@ define(['app','base', '../../services/home'], function (app) {
         });
         
         var featuretteListener = $scope.$on('UpdateFeaturette', function (event, editable) {
-            debugger;
             homeService.updateFeaturette(editable).then(function (result) {
-                console.log(result.content);
+                console.log(result[0]);
             }, function (error) {
                 console.log(error);
             });
