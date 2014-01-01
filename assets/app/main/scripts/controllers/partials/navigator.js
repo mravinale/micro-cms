@@ -23,7 +23,6 @@ define(['app','../../services/blog'], function (app) {
             $rootScope.isAuthenticated = false;
         };
 
-
         $scope.edit = function () {
             $rootScope.editEnable =  !$rootScope.editEnable;
         };
@@ -43,50 +42,31 @@ define(['app','../../services/blog'], function (app) {
                 console.log(error.data); 
             });
         };
-         
+
+        //menu items class activation
+        $scope.isActive = function (location) {
+            return location === $location.url();
+        };
 
         $scope.$on('$routeChangeSuccess', function (scope, next, current) {
-
             if(next.$$route == undefined) return;
 
-            if (next.$$route.controller == 'blogPageController') {
-                $scope.createButtonDisabled = true;
-                $scope.editButtonDisabled = false;
-                $scope.deleteButtonDisabled = false;
-            }
-            else if (next.$$route.controller == 'blogController') {
-                $scope.createButtonDisabled = false;
-                $scope.editButtonDisabled = true;
-                $scope.deleteButtonDisabled = true;
-            }
-            else if (next.$$route.controller == 'homeController') {
-                $scope.createButtonDisabled = true;
-                $scope.editButtonDisabled = false;
-                $scope.deleteButtonDisabled = true;
-            }
-             
+            $scope.editButtonDisabled = next.$$route.controller == 'blogController';
+            $scope.createButtonDisabled = next.$$route.controller == 'blogPageController' || next.$$route.controller == 'homeController';
+            $scope.deleteButtonDisabled =  next.$$route.controller == 'homeController' || next.$$route.controller == 'blogController';
+
         });
 
         $scope.showLogin = function () {
-
-            var login = $dialog.dialog({
+            $dialog.dialog({
                 backdrop: true,
                 keyboard: true,
                 dialogFade: true,
                 backdropClick: false,
                 templateUrl: 'app/main/views/partials/login.html',
                 controller: 'dialogController',
-                resolve: {
-                    $parentScope: function () {
-                        return $scope;
-                    }
-                }
-            });
-
-            login.open().then(function (result) {
-                console.log(result);
-            });
-
+                resolve: { $parentScope: function () { return $scope; } }
+            }).open();
         };
 
         $scope.init();

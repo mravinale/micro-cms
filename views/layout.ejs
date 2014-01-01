@@ -2,10 +2,10 @@
 <html>
       <head>
 
-        <title>Heracles</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+          <title>Heracles</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-        <link rel="stylesheet" href="/styles/bootstrap.css">
+          <link rel="stylesheet" href="/styles/bootstrap.css">
 
           <link href="/styles/bootstrap.min.css" rel="stylesheet" />
           <link href="/styles/bootstrap-responsive.css" rel="stylesheet" />
@@ -15,42 +15,8 @@
       </head>
 
       <body  ng-controller="BaseCtrl">
-
           <!-- Navigation -->
-          <div class="navbar-wrapper" ng-controller="navigatorController">
-          <div class="container">
-              <div class="navbar navbar-inverse navbar-fixed-top" bs-navbar>
-                  <div class="navbar-inner">
-                      <div class="container">
-                          <a class="brand" href="#/home">Atlas</a>
-                          <div class="nav-collapse collapse">
-                              <ul class="nav">
-                                  <li ng-class="{active: isMainSelected}" smooth-scroll target="main"><a href="#/home#main">Main</a></li>
-                                  <li ng-class="{active: isFeature1Selected}" smooth-scroll target="feature1"><a href="#/home#feature1">feature1</a></li>
-                                  <li ng-class="{active: isFeature2Selected}" smooth-scroll target="feature2"><a href="#/home#feature2">feature2</a></li>
-                                  <li ng-class="{active: isFeature3Selected}" smooth-scroll target="feature3"><a href="#/home#feature3">feature3</a></li>
-                                  <li data-match-route="/blog"><a href="#/blog">Blog</a></li>
-                                  <li data-match-route="/about"><a href="#/about">About</a></li>
-
-                              </ul>
-                              <ul class="pull-right">
-                                  <div class="btn-toolbar">
-                                      <div class="btn-group" style="margin-top: 4px">
-                                          <button ng-show="isAuthenticated && !createButtonDisabled" type="button" class="btn-inverse" ng-click="create()">Create</button>
-                                          <button ng-show="isAuthenticated && !editButtonDisabled" type="button" class="btn-inverse"  ng-click="edit()">Edit</button>
-                                          <button ng-show="isAuthenticated && !deleteButtonDisabled" type="button" class="btn-inverse" ng-click="delete()">Delete</button>
-                                          <button ng-show="!isAuthenticated" type="button" class="btn-inverse" ng-click="showLogin()">login</button>
-                                          <button ng-show="isAuthenticated" type="button" class="btn-inverse" ng-click="isAuthenticated=!isAuthenticated">logout</button>
-                                      </div>
-                                  </div>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
+          <ng-include class="navbar-wrapper" src='"app/main/views/partials/navigator.html"' ng-controller="navigatorController"></ng-include>
           <!-- Content -->
           <div class="container-fluid" id="main">
               <div class="row-fluid">
@@ -58,39 +24,37 @@
                   <ng-view></ng-view>
               </div>
           </div>
+      </body>
 
-          <!-- Bring in the socket.io client -->
-          <!--script type="text/javascript" src="/js/sails/socket.io.js"></script>
-          <script type="text/javascript" src="/js/sails/sails.io.js"></script>
-          <script type="text/javascript" src="/js/sails/app.js"></script-->
+      <script>
+          var Aloha = window.Aloha || (window.Aloha = {ready: function(){return false;}});
+          Aloha.settings = {
+              bundles: {
+                  custom: '/js/aloha'
+              },
+              locale: 'en',
+              plugins: {
+                  load: "custom/ui,custom/format,custom/table,custom/list,custom/link,custom/highlighteditables,custom/block,custom/image,custom/undo,custom/contenthandler,custom/paste,custom/commands,custom/abbr",
+                  format: {
+                      config: ['b', 'i', 'u', 'del', 'sub', 'sup', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'pre'],
+                      editables: {
+                          heading1: ['b', 'i', 'u', 'del', 'sub', 'sup'],
+                          heading2: ['b', 'i', 'u', 'del', 'sub', 'sup'],
+                          heading3: ['b', 'i', 'u', 'del', 'sub', 'sup']
+                      }
+                  }
+              },
+              sidebar: {
+                  disabled: true
+              }
+          };
+      </script>
 
-          <!-- Your scripts here? -->
+      <script data-main="app/main" src="/js/require/require.min.js"></script>
 
+      <!-- Bring in the socket.io client -->
+      <!--script type="text/javascript" src="/js/sails/socket.io.js"></script>
+      <script type="text/javascript" src="/js/sails/sails.io.js"></script>
+      <script type="text/javascript" src="/js/sails/app.js"></script-->
 
-          <script>
-                var Aloha = window.Aloha || (window.Aloha = {ready: function(){return false;}});
-                Aloha.settings = {
-                    bundles: {
-                        custom: '/js/aloha'
-                    },
-                    locale: 'en',
-                    plugins: {
-                        load: "custom/ui,custom/format,custom/table,custom/list,custom/link,custom/highlighteditables,custom/block,custom/image,custom/undo,custom/contenthandler,custom/paste,custom/commands,custom/abbr",
-                        format: {
-                            config: ['b', 'i', 'u', 'del', 'sub', 'sup', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'pre'],
-                            editables: {
-                                heading1: ['b', 'i', 'u', 'del', 'sub', 'sup'],
-                                heading2: ['b', 'i', 'u', 'del', 'sub', 'sup'],
-                                heading3: ['b', 'i', 'u', 'del', 'sub', 'sup']
-                            }
-                        }
-                    },
-                    sidebar: {
-                        disabled: true
-                    }
-                };
-            </script>
-
-          <script data-main="app/main" src="/js/require/require.min.js"></script>
-       </body>
 </html>

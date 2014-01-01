@@ -1,16 +1,31 @@
-<!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Heracles</a>
+<div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" bs-navbar>
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#/home">Heracles</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li ng-class="{active: isActive('/home#main') || isActive('/home') }" smooth-scroll target="main"><a href="#/home#main">Main</a></li>
+                        <li ng-class="{active: isActive('/home#feature1')}" smooth-scroll target="feature1"><a href="#/home#feature1">feature1</a></li>
+                        <li ng-class="{active: isActive('/home#feature2')}" smooth-scroll target="feature2"><a href="#/home#feature2">feature2</a></li>
+                        <li ng-class="{active: isActive('/home#feature3')}" smooth-scroll target="feature3"><a href="#/home#feature3">feature3</a></li>
+                        <li data-match-route="/blog"><a href="#/blog">Blog</a></li>
+                        <li data-match-route="/about"><a href="#/about">About</a></li>
+
+                    </ul>
+                    <ul class="pull-right">
+                        <div class="btn-toolbar">
+                            <div class="btn-group" style="margin-top: 4px">
+                                <button ng-show="isAuthenticated && !createButtonDisabled" type="button" class="btn-inverse" ng-click="create()">Create</button>
+                                <button ng-show="isAuthenticated && !editButtonDisabled" type="button" class="btn-inverse"  ng-click="edit()">Edit</button>
+                                <button ng-show="isAuthenticated && !deleteButtonDisabled" type="button" class="btn-inverse" ng-click="delete()">Delete</button>
+                                <button ng-show="!isAuthenticated" type="button" class="btn-inverse" ng-click="showLogin()">login</button>
+                                <button ng-show="isAuthenticated" type="button" class="btn-inverse" ng-click="isAuthenticated=!isAuthenticated">logout</button>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li ng-class="{ active: isActive('/home')}"><a href="#">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a ng-click="logout()">Log Out</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
     </div>
 </div>
