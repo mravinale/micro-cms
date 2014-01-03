@@ -224,22 +224,38 @@ angular.module('aloha', []).directive('aloha', ['$location', '$compile', '$http'
 	};
 }])
 
-angular.module('smoothscroll', []).directive('smoothScroll', [ function () {
-      return {
-          restrict: 'A',
-          link: function (scope, element, attr) {
-              return element.bind('click', function () {
-                  var offset, speed, target;
-                  if (attr.target) {
-                      offset = attr.offset || 100;
-                      target = $('#' + attr.target);
-                      speed = attr.speed || 500;
-                      return $('html,body').stop().animate({ scrollTop: target.offset().top - offset }, speed);
-                  } else {
-                      return $('html,body').stop().animate({ scrollTop: 0 }, speed);
-                  }
-              });
-          }
-      };
-  }
+angular.module('smoothscroll', []).directive('smoothScroll', ['$location','$window', function ($location,$window) {
+
+    var scrollAnimate = function(scope, attr){
+        var offset, speed, target;
+
+        if (attr.target) {
+            offset = attr.offset || 100;
+            target = $('#' + attr.target);
+            scope.$apply(function(){scope.target = attr.target});
+            speed = attr.speed || 500;
+            return $('html,body').stop().animate({ scrollTop: target.offset().top - offset }, speed);
+        } else {
+            scope.$apply(function(){scope.target = null});
+            return $('html,body').stop().animate({ scrollTop: 0 }, speed);
+        }
+    };
+
+    return {
+        restrict: 'A',
+        link: function (scope, element, attr) {
+            return element.bind('click', function () {
+
+                if($location.path() != "/home"){
+                   $window.location = "#/home";
+                   setTimeout(function () { scrollAnimate(scope, attr); }, 300)
+                   return;
+                }
+
+                scrollAnimate(scope, attr);
+
+            });
+        }
+    };
+}
 ]);
