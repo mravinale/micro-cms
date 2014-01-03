@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="navbar navbar-inverse navbar-fixed-top" bs-navbar>
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
                 <a class="brand" href="#/home">Heracles</a>
@@ -9,8 +9,8 @@
                         <li ng-class="{active: isActive('/home#feature1')}" smooth-scroll target="feature1"><a href="#/home#feature1">feature1</a></li>
                         <li ng-class="{active: isActive('/home#feature2')}" smooth-scroll target="feature2"><a href="#/home#feature2">feature2</a></li>
                         <li ng-class="{active: isActive('/home#feature3')}" smooth-scroll target="feature3"><a href="#/home#feature3">feature3</a></li>
-                        <li data-match-route="/blog"><a href="#/blog">Blog</a></li>
-                        <li data-match-route="/about"><a href="#/about">About</a></li>
+                        <li ng-class="{active: isActive('/blog')}"><a href="#/blog">Blog</a></li>
+                        <li ng-class="{active: isActive('/about')}"><a href="#/about">About</a></li>
 
                     </ul>
                     <ul class="pull-right">

@@ -1,20 +1,5 @@
 
-define(['app','../../services/blog'], function (app) {
-
-    app.controller('dialogController', function ($rootScope, $scope, dialog) {
-
-        $scope.close = function (result) {
-            dialog.close(result);
-        };
-
-        $scope.login = function (result) {
-            if ($scope.userName == "admin" && $scope.password == "admin"){
-                $rootScope.isAuthenticated = true;
-                dialog.close(result);
-            }
-        };
-
-    });
+define(['app','main/scripts/controllers/partials/login','../../services/blog'], function (app) {
 
     app.controller('navigatorController', function ($rootScope, $q, $dialog, $scope, homeService, $route, $location, blogService) {
 
@@ -64,7 +49,7 @@ define(['app','../../services/blog'], function (app) {
                 dialogFade: true,
                 backdropClick: false,
                 templateUrl: 'app/main/views/partials/login.html',
-                controller: 'dialogController',
+                controller: 'loginController',
                 resolve: { $parentScope: function () { return $scope; } }
             }).open();
         };
