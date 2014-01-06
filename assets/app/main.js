@@ -5,13 +5,15 @@ require.config({
    // urlArgs: 'cb=' + Math.floor(new Date().valueOf()).toString(),
     paths: {
         'jQuery': '../../js/jquery/jquery-1.9.1.min',
-        'aloha': ['http://cdn.aloha-editor.org/0.23.25/lib/aloha'],//'../../js/aloha',
+      //  'custom': '../../js/custom',
+       // 'aloha': ['http://cdn.aloha-editor.org/0.23.25/lib/aloha'],//'../../js/aloha',
+        'aloha':  '../../js/aloha',
         'angular': '../../js/angular/angular.min',
         'angularRoute': '../../js/angular/angular-route.min',
         'angular-ui': '../../js/angular/angular-ui.min',
         'angular-strap': '../../js/angular/angular-strap.min',
         'angular-bootstrap-tpls': '../../js/angular/ui-bootstrap-tpls-0.5.0.min',
-        'bootstrap': '../../js/boostrap/bootstrap.min',
+        'bootstrap': '../../js/bootstrap/bootstrap',
         'modernizr': '../../js/jquery/modernizr-2.5.3',
         'holder':'../../js/holder',
         'angular-aloha': 'main/scripts/directives/angular-aloha',
@@ -20,6 +22,7 @@ require.config({
     priority: ["jQuery", "angular","angularRoute","angular-ui","angular-strap","'angular-bootstrap-tpls","angular-aloha"],
     shim: {
         'jQuery': { 'exports': 'jQuery' },
+     //   'custom': { exports: 'custom', deps: ['jQuery'] },
         'angular': { 'exports': 'angular' },
         'angularRoute': { deps: ['angular'] },
         'holder': { 'exports': 'holder' },
@@ -33,6 +36,7 @@ require.config({
 require(['jQuery',
     'angular',
     'config'
+ //   'custom'
 ], function ($,angular) {
     angular.bootstrap(document, ['Heracles']);
 });
