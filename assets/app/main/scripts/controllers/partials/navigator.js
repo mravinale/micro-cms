@@ -5,7 +5,7 @@ define(['app','main/scripts/controllers/partials/login','../../services/blog'], 
 
         $scope.init = function () {
             $rootScope.editEnable = false;
-            $rootScope.isAuthenticated = false;
+            $rootScope.isAuthenticated = true;
         };
 
         $scope.edit = function () {

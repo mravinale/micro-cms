@@ -15,31 +15,40 @@ module.exports.bootstrap = function (cb) {
     var data =[
         {
             id : 1,
-            type : "PreviewInfo",
-            content : "<img class='img-circle' ng-src='images/marketing1.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
+            type : "Vision",
+            subtype : "vision1",
+            content : "<div class='service-box'><figure><img src='images/ico-1.jpg' alt=''></figure>   <h3>Bootstrap framework</h3><p>Well, the way they make shows is, they make one show. That show's called a pilot.</p></div>"
         },
         {
             id : 2,
-            type : "PreviewInfo",
-            content : "<img class='img-circle' ng-src='images/marketing2.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
+            type : "Vision",
+            subtype:"vision2",
+            content : "<div class='service-box'><figure> <img src='images/ico-2.jpg' alt=''> </figure><h3>Corporate theme</h3> <p>Well, the way they make shows is, they make one show. That show's called a pilot.</p></div>"
         },
         {
             id : 3,
-            type : "PreviewInfo",
-            content : "<img class='img-circle' ng-src='images/marketing3.jpe'><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p><p><a class='btn' href='#'>View details &raquo;</a></p>"
+            type : "Vision",
+            subtype: "vision3",
+            content : "<div class='service-box'><figure><img src='images/ico-3.jpg' alt=''></figure><h3>For creatives</h3> <p>Well, the way they make shows is, they make one show. That show's called a pilot.</p> </div>"
         },
         {
             id : 4,
-            type : "Featurette",
-            content: "<img class='featurette-image pull-left' src='/images/featurette1.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
+            type : "Vision",
+            subtype : "visionTitle",
+            content : "<div class='col-md-9 text-left'><h4 class='title-12'>What We Do</h4> <h1>We provide super awesome digital service</h1> <p class='intro'>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people.</p> </div>"
         },
         {
             id : 5,
             type : "Featurette",
-            content: "<img class='featurette-image pull-right' src='/images/featurette2.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
+            content: "<img class='featurette-image pull-left' src='/images/featurette1.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
         },
         {
             id : 6,
+            type : "Featurette",
+            content: "<img class='featurette-image pull-right' src='/images/featurette2.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
+        },
+        {
+            id : 7,
             type : "Featurette",
             content: "<img class='featurette-image pull-left' src='/images/featurette3.jpe'><h2 class='featurette-heading'>Vestibulum id ligula porta felis. <span class='muted'>porta felis euismod.</span></h2><p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>"
         }
@@ -75,10 +84,11 @@ module.exports.bootstrap = function (cb) {
     Editable.create(data[3], function(err){ if(err) console.error(err); });
     Editable.create(data[4], function(err){ if(err) console.error(err); });
     Editable.create(data[5], function(err){ if(err) console.error(err); });
+    Editable.create(data[6], function(err){ if(err) console.error(err); });
 
-    Post.create(posts[0], function(err){ if(err) console.error(err); });
-    Post.create(posts[1], function(err){ if(err) console.error(err); });
-    Post.create(posts[2], function(err){ if(err) console.error(err); });
+    //Post.create(posts[0], function(err){ if(err) console.error(err); });
+    //Post.create(posts[1], function(err){ if(err) console.error(err); });
+    //Post.create(posts[2], function(err){ if(err) console.error(err); });
 
 
     // It's very important to trigger this callack method when you are finished

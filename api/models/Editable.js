@@ -17,6 +17,11 @@ module.exports = {
             required: true
         },
 
+        subtype: {
+            type: 'string',
+            required: false
+        },
+
         content: {
             type: 'string',
             required: true,

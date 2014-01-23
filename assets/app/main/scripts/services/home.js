@@ -4,20 +4,20 @@ define(['app'], function (app) {
 
         var urlBase = '/editable/';
 
-        this.getPreviewInfo = function () {
-            return $http.get(urlBase + 'PreviewInfo');
+        this.getVisionInfo = function () {
+            return $http.get(urlBase + 'VisionInfo');
         };
         
-        this.getFeaturettes = function () {
-            return $http.get(urlBase + 'Featurette');
+        this.getServiceInfo = function () {
+            return $http.get(urlBase + 'ServiceInfo');
         };
 
-        this.updatePreviewInfo = function (editable) { 
-            return $http.put(urlBase + 'UpdatePreviewInfo/' + editable.id, editable);
+        this.updateVisionInfo= function (editable) {
+            return $http.put(urlBase + 'UpdateVisionInfo/' + editable.id, editable);
         };
 
-        this.updateFeaturette = function (editable) {
-            return $http.put(urlBase + 'UpdateFeaturette/' + editable.id, editable);
+        this.updateServiceInfo = function (editable) {
+            return $http.put(urlBase + 'UpdateServiceInfo/' + editable.id, editable);
         };
 
         

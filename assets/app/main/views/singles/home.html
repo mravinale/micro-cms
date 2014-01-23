@@ -1,8 +1,5 @@
-<!-- Content -->
-<div id="main"></div>
-
-<div id="myCarousel" class="carousel slide">
-
+<!-- start:Home -->
+<section id="home" class="carousel slide">
     <div class="carousel-inner">
         <div carousel interval="5000">
             <div slide ng-repeat="slide in slides" active="slide.active">
@@ -31,57 +28,27 @@
             </div>
         </div>
     </div>
+</section>
+<!-- end:Home -->
 
-</div>
-
-
-<section class="service space">
-    <div class="container">
+<!-- start:Vision -->
+<section id="vision" class="service space">
+    <div id="" class="container">
         <div class="row">
-            <div class="col-md-9 text-left">
-                <h4 class="title-12">What We Do</h4>
-                <h1>We provide super awesome digital service using just pure
-                    <b>
-                        <span class="f-green txt-rotate" data-period="4000" data-rotate='[ "love & passion.", "knowledge.", "artistic approach.", "love!" ]'></span>
-                    </b>
-                </h1>
-                <p class="intro">Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people.</p>
-            </div>
-            <!-- .col-12 -->
+            <aloha compile="visionTitle.content" id="{{visionTitle.id}}" type="{{visionTitle.type}}" class="span4 content"></aloha>
         </div>
         <!-- .row -->
         <div class="row p-top-50">
             <div class="col-md-4">
-                <div class="service-box">
-                    <figure>
-                        <img src="images/ico-1.jpg" alt="">
-                    </figure>
-                    <h3>Bootstrap framework</h3>
-                    <p>Well, the way they make shows is, they make one show. That show's called a pilot.</p>
-                </div>
-                <!-- end:Service-box -->
+                <aloha compile="vision1.content" id="{{vision1.id}}" type="{{vision1.type}}" class="span4 content"></aloha>
             </div>
             <!-- .col-4 -->
             <div class="col-md-4">
-                <div class="service-box">
-                    <figure>
-                        <img src="images/ico-2.jpg" alt="">
-                    </figure>
-                    <h3>Corporate theme</h3>
-                    <p>Well, the way they make shows is, they make one show. That show's called a pilot.</p>
-                </div>
-                <!-- end:Service-box -->
+                <aloha compile="vision2.content" id="{{vision2.id}}" type="{{vision2.type}}" class="span4 content"></aloha>
             </div>
             <!-- .col-4 -->
             <div class="col-md-4">
-                <div class="service-box">
-                    <figure>
-                        <img src="images/ico-3.jpg" alt="">
-                    </figure>
-                    <h3>For creatives</h3>
-                    <p>Well, the way they make shows is, they make one show. That show's called a pilot.</p>
-                </div>
-                <!-- end:Service-box -->
+                <aloha compile="vision3.content" id="{{vision3.id}}" type="{{vision3.type}}" class="span4 content"></aloha>
             </div>
             <!-- .col-4 -->
         </div>
@@ -89,8 +56,7 @@
     </div>
     <!-- end:Container -->
 </section>
-
-<div class="space separator">
+<div id="separator1" class="space separator">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
@@ -107,8 +73,9 @@
         </div>
     </div>
 </div>
+<!-- end:Vision -->
 
-<!-- end:Service -->
+<!-- start:Services -->
 <section class="space" id="features">
     <div class="container">
         <div class="row">
@@ -133,9 +100,8 @@
             </div>
             <!-- .col-4 -->
             <div class="col-md-4 col-sm-4">
-                <article class="et-wrapper et-rotate" data-slide-in="moveFromTop" data-slide-out="fade">
+                <article class="et-wrapper" >
                     <div class="et-page features-box et-page-current">
-                        <i class="fa fa-bookmark-o"></i>
                         <h3>Click To Reveal Content</h3>
                         <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense!</p>
                     </div>
@@ -161,8 +127,7 @@
     </div>
     <!-- .end:Container -->
 </section>
-<!-- end:features section -->
-<div class="space separator">
+<div id="separator2" class="space separator">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
@@ -179,6 +144,8 @@
         </div>
     </div>
 </div>
+<!-- end:Services -->
+
 <!-- start:About -->
 <section id="about" class="space p-btm-0">
     <div class="container">
@@ -221,64 +188,9 @@
     <!-- /.container -->
 </section>
 <!-- end:About -->
-<div class="space separator">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <p>
-                    <span class="glyphicon glyphicon-send"></span>
-                </p>
-                <p class="lead">
-                    <i>Lets work together and create something awesome</i>
-                </p>
-                <p>
-                    <a href="contact.php" class="btn btn-lg btn-green">Get a Free Quote</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- START WORKS SECTION -->
-<section id="projects" class="space">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 text-left">
-                <h4 class="title-12">Our Work</h4>
-                <h1>We work with some of the leaders in the industries like
-                    <b>
-                        <span class="f-green txt-rotate" data-period="4000" data-rotate="[ &quot;apple &amp; bmw.&quot;, &quot;mercedes.&quot;, &quot;webmonkeys.&quot;, &quot;apple!&quot; ]"></span>
-                    </b>
-                </h1>
-                <p class="intro">Have an expert stylist shop for you. They'll email you outfits and items that look amazing on you, completely free.</p>
-                <p class="intro">Have an expert stylist shop for you. They'll email you outfits and items that look amazing on you, completely free.</p>
-                <p class="intro">Have an expert stylist shop for you. They'll email you outfits and items that look amazing on you, completely free.</p>
 
-            </div>
-            <!-- .col-12 -->
-        </div>
-
-    </div>
-</section>
-<!-- END WORKS SECTION -->
-<div class="space separator">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <p>
-                    <span class="glyphicon glyphicon-send"></span>
-                </p>
-                <p class="lead">
-                    <i>Lets work together and create something awesome</i>
-                </p>
-                <p>
-                    <a href="contact.php" class="btn btn-lg btn-green">Get a Free Quote</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section id="cta-contact" class="space">
+<!-- start:Contact -->
+<section id="contact" class="space">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
@@ -290,106 +202,25 @@
             </div>
         </div>
     </div>
-</section>
-<footer id="footer">
     <div class="container">
-        <div class="row br-btm">
-            <div class="footer-wrap clearfix text-center">
-                <div class="col-md-4">
-                                <span>
-                                    <i class="fa fa-map-marker"></i>
-                                </span>
-                    <address>
-                        <strong>Kendo, Inc.</strong>
-                        <br>795 Folsom Ave, Suite 600
-                        <br>LA, CA 94107
-                        <br>
-                        <abbr title="Phone">P:</abbr>(123) 456-7890</address>
-                </div>
-                <!-- col-4 -->
-                <div class="col-md-4">
-                                <span>
-                                    <i class="fa fa-map-marker"></i>
-                                </span>
-                    <address>
-                        <strong>Kendo, Inc.</strong>
-                        <br>795 Folsom Ave, Suite 600
-                        <br>Sarajevo, CA 94107
-                        <br>
-                        <abbr title="Phone">P:</abbr>(123) 456-7890</address>
-                </div>
-                <div class="col-md-4">
-                                <span>
-                                    <i class="fa fa-map-marker"></i>
-                                </span>
-                    <address>
-                        <strong>Kendo, Inc.</strong>
-                        <br>795 Folsom Ave, Suite 600
-                        <br>San Francisco, CA 94107
-                        <br>
-                        <abbr title="Phone">P:</abbr>(123) 456-7890</address>
-                </div>
-            </div>
-        </div>
-        <!-- .row -->
-        <div class="btm-footer col-md-12 text-center">
-            <ul class="footer-links clearfix list-inline list-unstyled">
-                <li>
-                    <a href="about.html#rewards" class="external">Buy App</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="about.html">About us</a>
-                </li>
-                <li>
-                    <a href="about.html">Privacy</a>
-                </li>
-                <li>
-                    <a href="contact-form.html">Contact</a>
-                </li>
-                <li>
-                    <a href="blog.html">Updates</a>
-                </li>
-                <li>
-                    <a href="about.html">Feedbacks</a>
-                </li>
-            </ul>
-            <p class="p-top-10">All Rights Reserved @2013 Pamukovic</p>
+        <div class=" col-md-12 text-center">
+
+            <p class="p-top-10">     </p>
             <ul class="socials list-inline list-unstyled p-top-10">
-                <li>
-                    <a class="about-social-icon gplus" href="#">
-                        <i class="fa fa-google-plus" style=""></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="about-social-icon pinterest" href="#">
-                        <i class="fa fa-pinterest" style=""></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="about-social-icon twitter" href="#">
-                        <i class="fa fa-twitter" style=""></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="about-social-icon rss" href="#">
-                        <i class="fa fa-rss" style=""></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="about-social-icon facebook" href="#">
-                        <i class="fa fa-facebook" style=""></i>
-                    </a>
-                </li>
+                <li><a class="about-social-icon gplus" href="#"><i class="fa fa-google-plus" style=""></i> </a> </li>
+                <li><a class="about-social-icon pinterest" href="#"><i class="fa fa-pinterest" style=""></i></a> </li>
+                <li> <a class="about-social-icon twitter" href="#"><i class="fa fa-twitter" style=""></i></a> </li>
+                <li><a class="about-social-icon rss" href="#"><i class="fa fa-rss" style=""></i></a> </li>
+                <li> <a class="about-social-icon facebook" href="#"> <i class="fa fa-facebook" style=""></i></a> </li>
             </ul>
         </div>
     </div>
+</section>
+<!-- end:Contact -->
+
+<footer>
+    <div class="container">
+        <p smooth-scroll="" target="main" class="pull-right"><a smooth-scroll target="home" href="" >Back to top</a></p>
+        <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
 </footer>
-
-
-<!-- Marketing messaging and featurettes
-    ================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-

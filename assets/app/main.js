@@ -7,6 +7,7 @@ require.config({
         'jQuery': '../../js/jquery/jquery-1.9.1.min',
       //  'custom': '../../js/custom',
        // 'aloha': ['http://cdn.aloha-editor.org/0.23.25/lib/aloha'],//'../../js/aloha',
+        'underscore': '../../js/underscore/underscore-min',
         'aloha':  '../../js/aloha',
         'angular': '../../js/angular/angular.min',
         'angularRoute': '../../js/angular/angular-route.min',
@@ -34,7 +35,7 @@ require.config({
 });
 
 require(['jQuery',
-    'angular',
+    'angular','underscore',
     'config'
  //   'custom'
 ], function ($,angular) {

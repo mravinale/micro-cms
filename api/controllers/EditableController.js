@@ -7,17 +7,17 @@
 
 module.exports = {
 
-    PreviewInfo: function(req, res) {
+    VisionInfo: function(req, res) {
         Editable.find()
             .sort({ createdAt: 'desc' })
-            .where({ type: 'PreviewInfo' })
+            .where({ type: 'vision' })
             .exec(function(err, items){
                 if (err) return res.send(err, 500);
                 res.send(items, 200);
             });
     },
 
-    UpdatePreviewInfo: function(req, res) {
+    UpdateVisionInfo: function(req, res) {
         Editable.findOne({ '_id': req.param('id') }, function(err, items){
             if (err) return res.send(err, 500);
 
@@ -25,9 +25,9 @@ module.exports = {
         });
     },
 
-    Featurette: function(req, res) {
+    ServiceInfo: function(req, res) {
         Editable.find()
-            .where({ type: 'Featurette' })
+            .where({ type: 'Service' })
             .sort({ createdAt: 'desc' })
             .exec(function(err, items){
                 if (err) return res.send(err, 500);
