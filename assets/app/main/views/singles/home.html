@@ -40,15 +40,25 @@
         <!-- .row -->
         <div class="row p-top-50">
             <div class="col-md-4">
-                <aloha compile="vision1.content" id="{{vision1.id}}" type="{{vision1.type}}" class="span4 content"></aloha>
+                <div class='service-box'>
+                    <figure> <img src='images/ico-1.jpg' alt=''> </figure>
+                    <aloha compile="vision1.content" id="{{vision1.id}}" type="{{vision1.type}}" class="span4 content"></aloha>
+                </div>
             </div>
             <!-- .col-4 -->
             <div class="col-md-4">
-                <aloha compile="vision2.content" id="{{vision2.id}}" type="{{vision2.type}}" class="span4 content"></aloha>
+                <div class='service-box'>
+                    <figure> <img src='images/ico-2.jpg' alt=''> </figure>
+                    <aloha compile="vision2.content" id="{{vision2.id}}" type="{{vision2.type}}" class="span4 content"></aloha>
+
+                </div>
             </div>
             <!-- .col-4 -->
             <div class="col-md-4">
-                <aloha compile="vision3.content" id="{{vision3.id}}" type="{{vision3.type}}" class="span4 content"></aloha>
+                <div class='service-box'>
+                    <figure> <img src='images/ico-3.jpg' alt=''> </figure>
+                    <aloha compile="vision3.content" id="{{vision3.id}}" type="{{vision3.type}}" class="span4 content"></aloha>
+                </div>
             </div>
             <!-- .col-4 -->
         </div>
@@ -56,6 +66,7 @@
     </div>
     <!-- end:Container -->
 </section>
+
 <div id="separator1" class="space separator">
     <div class="container">
         <div class="row">
@@ -79,44 +90,20 @@
 <section class="space" id="features">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h4 class="title">The Full Services</h4>
-                <h1>Display Your Service List</h1>
-                <p class="lead">Have an expert stylist shop for you. They'll email you outfits.</p>
-            </div>
-            <!-- .col-12 -->
+            <aloha compile="serviceTitle.content" id="{{serviceTitle.id}}" type="{{serviceTitle.type}}" class="span4 content"></aloha>
         </div>
         <!-- .row -->
         <div class="row  p-top-50">
             <div class="col-md-4 col-sm-4">
-                <article class="et-wrapper et-rotate" data-slide-in="moveFromTop" data-slide-out="fade">
-                    <div class="et-page et-page-opacity features-box et-page-current">
-                        <i class="fa fa-bookmark-o"></i>
-                        <h3>Click This Box</h3>
-                        <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense!</p>
-                    </div>
+                <aloha compile="service1.content" id="{{service1.id}}" type="{{service1.type}}" class="span4 content"></aloha>
+            </div>
 
-                </article>
+            <div class="col-md-4 col-sm-4">
+                <aloha compile="service2.content" id="{{service2.id}}" type="{{service2.type}}" class="span4 content"></aloha>
             </div>
             <!-- .col-4 -->
             <div class="col-md-4 col-sm-4">
-                <article class="et-wrapper" >
-                    <div class="et-page features-box et-page-current">
-                        <h3>Click To Reveal Content</h3>
-                        <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense!</p>
-                    </div>
-
-                </article>
-            </div>
-            <!-- .col-4 -->
-            <div class="col-md-4 col-sm-4">
-                <article class="et-wrapper et-rotate" data-slide-in="moveFromTopFade" data-slide-out="moveToRightFade">
-                    <div class="et-page features-box et-page-current">
-                        <i class="fa fa-bell-o"></i>
-                        <h3>Click This Box</h3>
-                        <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense!</p>
-                    </div>
-                </article>
+                <aloha compile="service3.content" id="{{service3.id}}" type="{{service3.type}}" class="span4 content"></aloha>
             </div>
             <!-- .col-4 -->
         </div>
@@ -127,6 +114,7 @@
     </div>
     <!-- .end:Container -->
 </section>
+
 <div id="separator2" class="space separator">
     <div class="container">
         <div class="row">
@@ -150,38 +138,23 @@
 <section id="about" class="space p-btm-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-                <h3 class="title-12">ABOUT US</h3>
-                <h1>The
-                    <span class="f-800 f-green">Kendo</span>Full Story</h1>
-                <p>Kendo Theme is a Have an expert stylist shop for you. They'll email you outfits and items that look amazing on you, completely free.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-            </div>
-            <!-- .col 10 -->
+            <aloha compile="aboutTitle.content" id="{{aboutTitle.id}}" type="{{aboutTitle.type}}" class="span4 content"></aloha>
         </div>
+
         <!-- /.row -->
-        <div class="row text-center">
-            <div class="col-md-12">
-                <ul class="stats-info list-unstyled list-inline">
-                    <li>
-                        <h2>7 Years</h2>
-                        <p>Since We Started</p>
-                    </li>
-                    <li>
-                        <h2>1,580+</h2>
-                        <p>Happy Customers</p>
-                    </li>
-                    <li>
-                        <h2>8 000 0...</h2>
-                        <p>Lines of Code</p>
-                    </li>
-                    <li>
-                        <h2>1500</h2>
-                        <p>Hard Working Folks</p>
-                    </li>
-                </ul>
-                <!-- end:Stast-Info -->
+        <div class="row" style="text-align: center;margin-bottom: 50px;margin-top: 50px;">
+            <div class='col-lg-4'>
+                <img class='img-circle' style='width: 140px; height: 140px;' src='/images/marketing1.jpe'>
+                <aloha compile="about1.content" id="{{about1.id}}" type="{{about1.type}}" class="span4 content"></aloha>
             </div>
-            <!-- .col-12 -->
+            <div class='col-lg-4'>
+                <img class='img-circle' style='width: 140px; height: 140px;' src='/images/marketing2.jpe'>
+                <aloha compile="about2.content" id="{{about2.id}}" type="{{about2.type}}" class="span4 content"></aloha>
+            </div>
+            <div class='col-lg-4'>
+                <img class='img-circle' style='width: 140px; height: 140px;' src='/images/marketing3.jpe'>
+                <aloha compile="about3.content" id="{{about3.id}}" type="{{about3.type}}" class="span4 content"></aloha>
+            </div>
         </div>
 
     </div>

@@ -12,6 +12,10 @@ define(['app'], function (app) {
             return $http.get(urlBase + 'ServiceInfo');
         };
 
+        this.getAboutInfo = function () {
+            return $http.get(urlBase + 'AboutInfo');
+        };
+
         this.updateVisionInfo= function (editable) {
             return $http.put(urlBase + 'UpdateVisionInfo/' + editable.id, editable);
         };
@@ -20,6 +24,9 @@ define(['app'], function (app) {
             return $http.put(urlBase + 'UpdateServiceInfo/' + editable.id, editable);
         };
 
+        this.updateAboutInfo = function (editable) {
+            return $http.put(urlBase + 'UpdateAboutInfo/' + editable.id, editable);
+        };
         
     }]);
 

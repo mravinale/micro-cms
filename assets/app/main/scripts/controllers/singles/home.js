@@ -12,35 +12,46 @@ define(['app','base', '../../services/home'], function (app) {
                 $scope.vision2 = _.where(visions.data, {subtype: "vision2"})[0];
                 $scope.vision3 = _.where(visions.data, {subtype: "vision3"})[0];
                 $scope.visionTitle = _.where(visions.data, {subtype: "visionTitle"})[0];
-
             }, function(error) {
                 console.log(error);
             });
         };
 
-        var getServices = function () {
-            homeService.getServicesInfo().then(function (services) {
+        var getServiceInfo = function () {
+            homeService.getServiceInfo().then(function (services) {
                 $scope.service1 = _.where(services.data, {subtype: "service1"})[0];
                 $scope.service2 = _.where(services.data, {subtype: "service2"})[0];
                 $scope.service3 = _.where(services.data, {subtype: "service3"})[0];
-                $scope.serviceTitle = _.where(visions.data, {subtype: "serviceTitle"})[0];
+                $scope.serviceTitle = _.where(services.data, {subtype: "serviceTitle"})[0];
             }, function (error) {
                 console.log(error);
             });
         };
 
-        var previewInfoListener = $scope.$on('Updatevision', function (event, editable) {
+        var getAboutInfo = function () {
+            homeService.getAboutInfo().then(function (abouts) {
+                $scope.about1 = _.where(abouts.data, {subtype: "about1"})[0];
+                $scope.about2 = _.where(abouts.data, {subtype: "about2"})[0];
+                $scope.about3 = _.where(abouts.data, {subtype: "about3"})[0];
+                $scope.aboutTitle = _.where(abouts.data, {subtype: "aboutTitle"})[0];
+            }, function (error) {
+                console.log(error);
+            });
+        };
 
-            homeService.updatePreviewInfo(editable).then(function (result) {
+        var visionInfoListener = $scope.$on('UpdateVision', function (event, editable) {
+
+            homeService.updateVisionInfo(editable).then(function (result) {
                 console.log(result[0]);
             }, function (error) {
                 console.log(error);
             });
             
         });
-        
-        var featuretteListener = $scope.$on('UpdateFeaturette', function (event, editable) {
-            homeService.updateFeaturette(editable).then(function (result) {
+
+        var serviceInfoListener = $scope.$on('UpdateService', function (event, editable) {
+
+            homeService.updateServiceInfo(editable).then(function (result) {
                 console.log(result[0]);
             }, function (error) {
                 console.log(error);
@@ -48,14 +59,28 @@ define(['app','base', '../../services/home'], function (app) {
 
         });
 
+        var aboutInfoListener = $scope.$on('UpdateAbout', function (event, editable) {
+
+            homeService.updateAboutInfo(editable).then(function (result) {
+                console.log(result[0]);
+            }, function (error) {
+                console.log(error);
+            });
+
+        });
+        
+
+
         $scope.$on("$destroy", function () {
-            previewInfoListener();
-            featuretteListener();
+            visionInfoListener();
+            serviceInfoListener();
+            aboutInfoListener();
         });
 
         $scope.init = function () {
             getVisionInfo();
-            getFeaturettes();
+            getServiceInfo();
+            getAboutInfo();
         };
 
         $scope.init();

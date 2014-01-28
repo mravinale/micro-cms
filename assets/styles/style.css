@@ -324,9 +324,9 @@ img.keep-original {
     text-align: center;
 }
 .features-box h3 {
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase;
+    /*color: #fff; */
+    font-size: 18px;
+   /* text-transform: uppercase; */
 }
 .features-box i {
     font-size: 45px;

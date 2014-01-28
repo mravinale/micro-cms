@@ -10,7 +10,27 @@ module.exports = {
     VisionInfo: function(req, res) {
         Editable.find()
             .sort({ createdAt: 'desc' })
-            .where({ type: 'vision' })
+            .where({ type: 'Vision' })
+            .exec(function(err, items){
+                if (err) return res.send(err, 500);
+                res.send(items, 200);
+            });
+    },
+
+    ServiceInfo: function(req, res) {
+        Editable.find()
+            .where({ type: 'Service' })
+            .sort({ createdAt: 'desc' })
+            .exec(function(err, items){
+                if (err) return res.send(err, 500);
+                res.send(items, 200);
+            });
+    },
+
+    AboutInfo: function(req, res) {
+        Editable.find()
+            .where({ type: 'About' })
+            .sort({ createdAt: 'desc' })
             .exec(function(err, items){
                 if (err) return res.send(err, 500);
                 res.send(items, 200);
@@ -25,18 +45,7 @@ module.exports = {
         });
     },
 
-    ServiceInfo: function(req, res) {
-        Editable.find()
-            .where({ type: 'Service' })
-            .sort({ createdAt: 'desc' })
-            .exec(function(err, items){
-                if (err) return res.send(err, 500);
-                res.send(items, 200);
-            });
-
-    },
-
-    UpdateFeaturette: function(req, res) {
+    UpdateVisionInfo: function(req, res) {
 
         var params = _.extend(req.query || {}, req.params || {}, req.body || {});
         var id = params.id;
@@ -47,10 +56,9 @@ module.exports = {
             if (err) return res.send(err, 500);
             res.send(updatedEditable, 200);
         });
-
     },
 
-    UpdatePreviewInfo: function(req, res) {
+    UpdateServiceInfo: function(req, res) {
 
         var params = _.extend(req.query || {}, req.params || {}, req.body || {});
         var id = params.id;
@@ -61,7 +69,19 @@ module.exports = {
             if (err) return res.send(err, 500);
             res.send(updatedEditable, 200);
         });
+    },
 
+    UpdateAboutInfo: function(req, res) {
+
+        var params = _.extend(req.query || {}, req.params || {}, req.body || {});
+        var id = params.id;
+
+        if (!id) return res.send("No id specified.",500);
+
+        Editable.update(id, params, function(err, updatedEditable) {
+            if (err) return res.send(err, 500);
+            res.send(updatedEditable, 200);
+        });
     }
 
 };
