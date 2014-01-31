@@ -194,6 +194,6 @@
 <footer>
     <div class="container">
         <p smooth-scroll="" target="main" class="pull-right"><a smooth-scroll target="home" href="" >Back to top</a></p>
-        <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p>© 2013 Company, Inc. ·  <a ng-show="!isAuthenticated"  href="" ng-click="showLogin()">login</a> <a ng-show="isAuthenticated"  href=""  ng-click="isAuthenticated=!isAuthenticated">logout</a></p>
     </div>
 </footer>
