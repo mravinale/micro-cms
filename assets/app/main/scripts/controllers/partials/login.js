@@ -1,17 +1,17 @@
 
 define(['app'], function (app) {
 
-    app.controller('loginController', function ($rootScope, $scope, dialog) {
+    app.controller('loginController', function ($rootScope, $scope, $modalInstance) {
 
         $scope.close = function (result) {
-            dialog.close(result);
+            $modalInstance.close(result);
         };
 
         $scope.login = function (result) {
-            if ($scope.userName == "admin" && $scope.password == "admin"){
+          // if ($scope.userName == "admin" && $scope.password == "admin"){
                 $rootScope.isAuthenticated = true;
-                dialog.close(result);
-            }
+                $modalInstance.close(result);
+          //  }
         };
 
     });

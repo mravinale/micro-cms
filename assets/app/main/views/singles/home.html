@@ -1,11 +1,10 @@
-<div id="main"></div>
-
-<div id="myCarousel" class="carousel slide">
-
+<!-- start:Home -->
+<section id="home" class="carousel slide">
     <div class="carousel-inner">
         <div carousel interval="5000">
             <div slide ng-repeat="slide in slides" active="slide.active">
                 <img ng-src="{{slide.image}}" style="margin: auto;">
+                <div class="overlay-1" style="margin-top: 30px;"></div>
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Example headline.</h1>
@@ -13,64 +12,188 @@
                         <a class="btn btn-large btn-primary" href="#">Sign up today</a>
                     </div>
                 </div>
+
+                <!--div class="slide-caption">
+                    <h6>Creative - Corporate - Software</h6>
+                    <h1>Kendo theme for
+                        <span class="txt-rotate" data-period="2000" data-rotate='[ "creatives.", "corporates.", "personal.", "fun!" ]'></span>
+                    </h1>
+                    <div class="contrast">
+                        <p>Pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra.</p>
+                        <p>
+                            <a class="btn btn-lg btn-green">Explore Theme</a>
+                        </p>
+                    </div>
+                </div-->
             </div>
         </div>
     </div>
+</section>
+<!-- end:Home -->
 
-</div>
-
-
-
-<!-- Marketing messaging and featurettes
-    ================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="container marketing">
-
-    <div class="row">
-        <div class="span12" style="text-align: center">
-            <h2>Nullam id dolor id nibh ultricies </h2>
-            <hr class="dashed">
+<!-- start:Vision -->
+<section id="vision" class="service space">
+    <div id="" class="container">
+        <div class="row">
+            <aloha compile="visionTitle.content" id="{{visionTitle.id}}" type="{{visionTitle.type}}" class="span4 content"></aloha>
         </div>
-    </div>
+        <!-- .row -->
+        <div class="row p-top-50">
+            <div class="col-md-4">
+                <div class='service-box'>
+                    <figure> <img src='images/ico-1.jpg' alt=''> </figure>
+                    <aloha compile="vision1.content" id="{{vision1.id}}" type="{{vision1.type}}" class="span4 content"></aloha>
+                </div>
+            </div>
+            <!-- .col-4 -->
+            <div class="col-md-4">
+                <div class='service-box'>
+                    <figure> <img src='images/ico-2.jpg' alt=''> </figure>
+                    <aloha compile="vision2.content" id="{{vision2.id}}" type="{{vision2.type}}" class="span4 content"></aloha>
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row-fluid">
-        <aloha compile="editable1.content" id="{{editable1.id}}" type="{{editable1.type}}" class="span4 content"></aloha>
-        <aloha compile="editable2.content" id="{{editable2.id}}" type="{{editable2.type}}" class="span4 content"></aloha>
-        <aloha compile="editable3.content" id="{{editable3.id}}" type="{{editable3.type}}" class="span4 content"></aloha>
+                </div>
+            </div>
+            <!-- .col-4 -->
+            <div class="col-md-4">
+                <div class='service-box'>
+                    <figure> <img src='images/ico-3.jpg' alt=''> </figure>
+                    <aloha compile="vision3.content" id="{{vision3.id}}" type="{{vision3.type}}" class="span4 content"></aloha>
+                </div>
+            </div>
+            <!-- .col-4 -->
+        </div>
+        <!-- .row -->
     </div>
-    <!-- /.row -->
+    <!-- end:Container -->
+</section>
 
-    <!-- START THE FEATURETTES -->
+<div id="separator1" class="space separator">
     <div class="container">
-
-        <hr id="feature1" class="featurette-divider">
-
-        <div class="featurette">
-            <aloha compile="featurette1.content" id="{{featurette1.id}}" type="{{featurette1.type}}"></aloha>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <p>
+                    <span class="glyphicon glyphicon-send"></span>
+                </p>
+                <p class="lead">
+                    <i>Lets work together and create something awesome</i>
+                </p>
+                <p>
+                    <a href="contact.php" class="btn btn-lg btn-green">Get a Free Quote</a>
+                </p>
+            </div>
         </div>
-
-        <hr id="feature2" class="featurette-divider">
-
-        <div class="featurette">
-            <aloha compile="featurette2.content" id="{{featurette2.id}}" type="{{featurette2.type}}"></aloha>
-        </div>
-
-        <hr id="feature3" class="featurette-divider">
-
-        <div class="featurette">
-            <aloha compile="featurette3.content" id="{{featurette3.id}}" type="{{featurette3.type}}"></aloha>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-
-        <!-- FOOTER -->
-        <footer>
-            <p smooth-scroll target="main" class="pull-right"><a href="#/home#main">Back to top</a></p>
-            <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-        </footer>
     </div>
 </div>
+<!-- end:Vision -->
+
+<!-- start:Services -->
+<section class="space" id="features">
+    <div class="container">
+        <div class="row">
+            <aloha compile="serviceTitle.content" id="{{serviceTitle.id}}" type="{{serviceTitle.type}}" class="span4 content"></aloha>
+        </div>
+        <!-- .row -->
+        <div class="row  p-top-50">
+            <div class="col-md-4 col-sm-4">
+                <aloha compile="service1.content" id="{{service1.id}}" type="{{service1.type}}" class="span4 content"></aloha>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <aloha compile="service2.content" id="{{service2.id}}" type="{{service2.type}}" class="span4 content"></aloha>
+            </div>
+            <!-- .col-4 -->
+            <div class="col-md-4 col-sm-4">
+                <aloha compile="service3.content" id="{{service3.id}}" type="{{service3.type}}" class="span4 content"></aloha>
+            </div>
+            <!-- .col-4 -->
+        </div>
+        <!-- .row -->
+
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .end:Container -->
+</section>
+
+<div id="separator2" class="space separator">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <p>
+                    <span class="glyphicon glyphicon-send"></span>
+                </p>
+                <p class="lead">
+                    <i>Lets work together and create something awesome</i>
+                </p>
+                <p>
+                    <a href="contact.php" class="btn btn-lg btn-green">Get a Free Quote</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end:Services -->
+
+<!-- start:About -->
+<section id="about" class="space p-btm-0">
+    <div class="container">
+        <div class="row">
+            <aloha compile="aboutTitle.content" id="{{aboutTitle.id}}" type="{{aboutTitle.type}}" class="span4 content"></aloha>
+        </div>
+
+        <!-- /.row -->
+        <div class="row" style="text-align: center;margin-bottom: 50px;margin-top: 50px;">
+            <div class='col-lg-4'>
+                <img class='img-circle' style='width: 140px; height: 140px;' src='/images/marketing1.jpe'>
+                <aloha compile="about1.content" id="{{about1.id}}" type="{{about1.type}}" class="span4 content"></aloha>
+            </div>
+            <div class='col-lg-4'>
+                <img class='img-circle' style='width: 140px; height: 140px;' src='/images/marketing2.jpe'>
+                <aloha compile="about2.content" id="{{about2.id}}" type="{{about2.type}}" class="span4 content"></aloha>
+            </div>
+            <div class='col-lg-4'>
+                <img class='img-circle' style='width: 140px; height: 140px;' src='/images/marketing3.jpe'>
+                <aloha compile="about3.content" id="{{about3.id}}" type="{{about3.type}}" class="span4 content"></aloha>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+</section>
+<!-- end:About -->
+
+<!-- start:Contact -->
+<section id="contact" class="space">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h1 class="f-white">Work with us</h1>
+                <p>We are a full service design agency from the heart of London. We create perfect brands, vibrant identities, outstanding websites and creative concepts.</p>
+                <p>
+                    <a href="contact.php" class="btn btn-green btn-lg">Get in touch with us</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class=" col-md-12 text-center">
+
+            <p class="p-top-10">     </p>
+            <ul class="socials list-inline list-unstyled p-top-10">
+                <li><a class="about-social-icon gplus" href="#"><i class="fa fa-google-plus" style=""></i> </a> </li>
+                <li><a class="about-social-icon pinterest" href="#"><i class="fa fa-pinterest" style=""></i></a> </li>
+                <li> <a class="about-social-icon twitter" href="#"><i class="fa fa-twitter" style=""></i></a> </li>
+                <li><a class="about-social-icon rss" href="#"><i class="fa fa-rss" style=""></i></a> </li>
+                <li> <a class="about-social-icon facebook" href="#"> <i class="fa fa-facebook" style=""></i></a> </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- end:Contact -->
+
+<footer>
+    <div class="container">
+        <p smooth-scroll="" target="main" class="pull-right"><a smooth-scroll target="home" href="" >Back to top</a></p>
+        <p>© 2013 Company, Inc. ·  <a ng-show="!isAuthenticated"  href="" ng-click="showLogin()">login</a> <a ng-show="isAuthenticated"  href=""  ng-click="isAuthenticated=!isAuthenticated">logout</a></p>
+    </div>
+</footer>
