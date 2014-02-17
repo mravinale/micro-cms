@@ -1,7 +1,7 @@
 
 define(['app','main/scripts/controllers/partials/login','../../services/blog'], function (app) {
 
-    app.controller('navigatorController', function ($rootScope, $q,  $scope, homeService, $modal, $route, $location, blogService) {
+    app.controller('navigatorController', function ($rootScope, $q, $dialog, $scope, homeService, $route, $location, blogService) {
 
         $scope.init = function () {
             $rootScope.editEnable = false;
@@ -24,7 +24,7 @@ define(['app','main/scripts/controllers/partials/login','../../services/blog'], 
             blogService.createPost().then(function (response) {
                 $location.path("/blogPage/" + response.data.id);
             }, function (error) {
-                console.log(error.data);
+                console.log(error.data); 
             });
         };
 
@@ -42,12 +42,21 @@ define(['app','main/scripts/controllers/partials/login','../../services/blog'], 
 
         });
 
+        $scope.showLogin = function () {
+            $dialog.dialog({
+                backdrop: true,
+                keyboard: true,
+                dialogFade: true,
+                backdropClick: false,
+                templateUrl: 'app/main/views/partials/login.html',
+                controller: 'loginController',
+                resolve: { $parentScope: function () { return $scope; } }
+            }).open();
+        };
 
         $scope.init();
        
     });
-
-
 
    
 
