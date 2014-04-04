@@ -17,6 +17,13 @@ sudo npm install
 node app
 ```
 
+### How it works (click to see the demo)
+
+[![introduction](http://s29.postimg.org/5cgmoypvb/micro_cms.png)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+
+### [See it live!](http://heracles-app.herokuapp.com/)
+
 ## The MIT License (MIT)
 
 Copyright (c) 2013-2014 Mariano Ravinale
