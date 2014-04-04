@@ -12,17 +12,22 @@ sudo npm install
 3. read more about [sails](http://sailsjs.org)
 
 
+
 ### Run
 ```
 node app
 ```
 
-### How it works (click to see the demo)
 
-[![introduction](http://s29.postimg.org/5cgmoypvb/micro_cms.png)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+### How we change content (click to see the demo)
+
+[![introduction](http://content.screencast.com/users/mravinales/folders/Jing/media/03f2a2e3-2725-4492-ba8f-09a7c33c38d3/2014-04-04_0731.png)](https://www.youtube.com/watch?v=vjYX2OJ2sMs)
 
 
-### [See it live!](http://heracles-app.herokuapp.com/)
+
+### [try yourself](http://heracles-app.herokuapp.com/)
+
+
 
 ## The MIT License (MIT)
 
