@@ -6,6 +6,7 @@ require.config({
     paths: {
         'jQuery': '../../js/jquery/jquery-1.9.1.min',
         'aloha': ['http://cdn.aloha-editor.org/0.23.25/lib/aloha'],//'../../js/aloha',
+        'underscore': '../../js/underscore/underscore-min',
         'angular': '../../js/angular/angular.min',
         'angularRoute': '../../js/angular/angular-route.min',
         'angular-ui': '../../js/angular/angular-ui.min',
@@ -32,6 +33,7 @@ require.config({
 
 require(['jQuery',
     'angular',
+    'underscore',
     'config'
 ], function ($,angular) {
     angular.bootstrap(document, ['Heracles']);

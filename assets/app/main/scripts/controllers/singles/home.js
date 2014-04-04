@@ -8,9 +8,9 @@ define(['app','base', '../../services/home'], function (app) {
 
         var getPreviewInfo = function () {
             homeService.getPreviewInfo().then(function(editables) {
-                $scope.editable1 = editables.data[0];
-                $scope.editable2 = editables.data[1];
-                $scope.editable3 = editables.data[2];
+                $scope.editable1 =  _.where(editables.data, {subtype: "PreviewInfo1"})[0];
+                $scope.editable2 = _.where(editables.data, {subtype: "PreviewInfo2"})[0];
+                $scope.editable3 = _.where(editables.data, {subtype: "PreviewInfo3"})[0];
             }, function(error) {
                 console.log(error);
             });
@@ -18,9 +18,9 @@ define(['app','base', '../../services/home'], function (app) {
 
         var getFeaturettes = function () {
             homeService.getFeaturettes().then(function (editables) {
-                $scope.featurette1 = editables.data[0];
-                $scope.featurette2 = editables.data[1];
-                $scope.featurette3 = editables.data[2];
+                $scope.featurette1 = _.where(editables.data, {subtype: "Featurette1"})[0];
+                $scope.featurette2 = _.where(editables.data, {subtype: "Featurette2"})[0];
+                $scope.featurette3 = _.where(editables.data, {subtype: "Featurette3"})[0];
             }, function (error) {
                 console.log(error);
             });
