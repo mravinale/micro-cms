@@ -19,13 +19,11 @@ node app
 ```
 
 
-### How we change content (click to see the demo)
-
-[![introduction](http://content.screencast.com/users/mravinales/folders/Jing/media/03f2a2e3-2725-4492-ba8f-09a7c33c38d3/2014-04-04_0731.png)](https://www.youtube.com/watch?v=vjYX2OJ2sMs)
+![introduction](http://share.gifyoutube.com/KraPkA.gif)
 
 
 
-### [try yourself](http://heracles-app.herokuapp.com/)
+## [Demo](http://heracles-app.herokuapp.com/)
 
 
 
