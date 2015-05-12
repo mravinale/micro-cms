@@ -5,7 +5,7 @@ require.config({
    // urlArgs: 'cb=' + Math.floor(new Date().valueOf()).toString(),
     paths: {
         'jQuery': '../../js/jquery/jquery-1.9.1.min',
-        'aloha': ['http://cdn.aloha-editor.org/0.23.25/lib/aloha'],//'../../js/aloha',
+        'aloha': ['https://cdn.aloha-editor.org/0.23.25/lib/aloha'],//'../../js/aloha',
         'underscore': '../../js/underscore/underscore-min',
         'angular': '../../js/angular/angular.min',
         'angularRoute': '../../js/angular/angular-route.min',
