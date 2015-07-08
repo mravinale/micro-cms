@@ -23,7 +23,7 @@ node app
 
 
 
-## [Demo](https://micro-cms-node.herokuapp.com)
+## [Demo](http://micro-cms-node.herokuapp.com)
 
 
 
